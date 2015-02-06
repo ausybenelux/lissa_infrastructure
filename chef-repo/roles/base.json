@@ -1,0 +1,24 @@
+{
+  "name": "base",
+  "description": "Base role applied to all nodes.",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+    "authorization": {
+                        "sudo": {
+                                    "users": "vagrant",
+                                    "passwordless": true
+                                }
+                    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[lissa]"
+  ],
+  "env_run_lists": {
+
+  }
+
+}

@@ -1,0 +1,17 @@
+{
+  "name": "worker",
+  "description": "Worker role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "web_user": "worker"
+  },
+
+  "chef_type": "role",
+  "run_list": [
+    "recipe[lissa::default]",
+    "recipe[lissa::worker]"
+  ],
+  "env_run_lists": {
+
+  }
+}

@@ -1,0 +1,17 @@
+.DS_Store
+.vagrant
+.idea
+.bundle
+
+# Don't send sensitive information to repo
+.chef/*.pem
+.chef/*.key
+.chef/knife.rb
+
+# Don't index generated files by chef.
+/admin-server
+/worker-server
+/docroot
+/lissa_kickstart
+/xhprof
+

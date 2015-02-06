@@ -1,0 +1,10 @@
+# GENERAL #
+[mysqld]
+key_buffer_size = 32M
+max_allowed_packet = 16M
+tmp_table_size = 64M
+max_heap_table_size = 64M
+query_cache_size = 4M
+
+[mysqldump]
+max_allowed_packet = 16M
