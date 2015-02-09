@@ -28,8 +28,24 @@ Please see Troubleshooting if deploying LISSA Kickstart doesn't work.
 - Drupal backend URL: http://admin.lissa.dev
 - Host path to drupal: admin-server/docroot
 - Vagrant path to drupal: /var/www/admin-server/docroot
-- Development should happen in admin-server/docroot/profiles/lissa_kickstart,
-  which is a clone of the 8.0.x branch of the lissa_kickstart repository.
+
+See the [LISSA Kickstart readme](https://github.com/ONEAgency/lissa_kickstart/blob/8.0.x/README.md) for more info.
+
+## Services
+
+The Vagrant box comes with the following services.
+
+| Service | Host | Port | Endpoint | Path | Credentials | Info |
+|---------|------|------|----------|------|-------------|------|
+| Drupal backend | admin.lissa.dev | 80 || /var/www/admin-server/docroot | admin:admin ||
+| RabbitMQ message queue | admin.lissa.dev | 15672 ||| guest:guest ||
+| Worker | admin.lissa.dev ||| /usr/local/share/lissa_worker || PHP script running from /usr/share/workerusing supervisord |
+| Nginx push stream server | admin.lissa.dev | 8080 | /publish ||| Accepts notifications to be sent to the websocket connections. |
+| Nginx push stream server websockets | admin.lissa.dev| 8080 | /ws/[uuid] ||| Websocket connection, uuid maps to the event node's uuid |
+
+## Remote and Multi Server Support
+
+By default the LISSA infrastructure will be deployed to a single node. It's perfectly possible to use separate servers for each service by using the included Chef roles and overriding the configuration files.
 
 ## Troubleshooting
 
