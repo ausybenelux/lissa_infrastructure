@@ -7,7 +7,6 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
 recipe           'lissa', 'Main LISSA configuration'
-recipe           'lissa::authorized_keys', 'Authorized keys installation recipe'
 recipe           'lissa::worker', 'Worker role cookbook'
 recipe           'lissa::database', 'Database role cookbook'
 recipe           'lissa::web', 'Web role cookbook'

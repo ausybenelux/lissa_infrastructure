@@ -6,7 +6,6 @@
 
 # Common
 default['lissa']['domain'] = 'lissa.dev'
-default['lissa']['authorized_keys'] = []
 
 default['lissa']['known_hosts'] = [ 'github.com']
 default['lissa']['user'] = ''

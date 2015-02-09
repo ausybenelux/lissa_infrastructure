@@ -32,8 +32,6 @@ include_recipe 'chef-client::delete_validation'
 
 ssh_known_hosts_entry 'github.com'
 
-include_recipe 'lissa::authorized_keys'
-
 # Add local host names.
 if node.has_key?(:vagrant_nodes)
   node.vagrant_nodes.each do |host_name, host|

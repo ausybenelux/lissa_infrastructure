@@ -85,8 +85,8 @@ cookbook_file "/usr/local/share/lissa_worker/settings.local.php" do
   group     node.nginx.user
 end
 
-# Composer install overrides, make sure user web has permissions
-node.override['composer']['global_configs'] = { "#{web_user}" => {} }
+
+# Install composer dependencies.
 include_recipe 'composer'
 
 composer_project "/usr/local/share/lissa_worker" do
