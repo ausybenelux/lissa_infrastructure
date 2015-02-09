@@ -1,14 +1,11 @@
-# LISSA Vagrant development box
+# LISSA Infrastructure
 
-This project will set up a Vagrant environment to develop and test the LISSA
-Drupal backend project. After provisioning the box you'll get a fresh Drupal 8
-environment with the latest LISSA Drupal backend code at http://lissa.dev.
+The LISSA Infrastructure project can be used to provision one or more servers
+with the services needed for running the LISSA tech stack. It uses Chef for
+provisioning machines and comes with a Vagrantfile for testing LISSA on your
+local machine.
 
-The LISSA backend itself is a Drupal 8 installation profile, located in its own
-git repository at git@gitlab.crosscheck.be:lissa/lissa_kickstart.git. A working copy will be
-installed at docroot/profiles/lissa_kickstart.
-
-## Requirements
+## Requirements (Vagrant)
 
 - Virtualbox 4.3.10+
 - Vagrant 1.6.3+
@@ -16,7 +13,6 @@ installed at docroot/profiles/lissa_kickstart.
       the installer returns an error about not being able to install 'nokogiri'
       then install the xcode command line tools by executing `xcode-select --install`
     - Vagrant Hostsupdater plugin. Use `vagrant plugin install vagrant-hostsupdater`
-    - Vagrant ProxyConf plugin. Use `vagrant plugin install vagrant-proxyconf`
 
 ## Installation
 
