@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
   config.hostsupdater.remove_on_suspend = true
   config.ssh.forward_agent = true
   # Prevent private key generation.
-  config.ssh.insert_key = false
+  # config.ssh.insert_key = false
   # Fix NFS permission issues
   config.nfs.map_uid = Process.uid
   config.nfs.map_gid = Process.gid
